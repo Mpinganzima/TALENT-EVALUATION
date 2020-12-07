@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <!-- Mobile Specific Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/fav.png"/>
+        <!-- Author Meta -->
+        <meta name="author" content="codepixer"/>
+        <!-- Meta Description -->
+        <meta name="description" content=""/>
+        <!-- Meta Keyword -->
+        <meta name="keywords" content=""/>
+        <!-- meta character set -->
+        <meta charset="UTF-8"/>
+        <!-- Site Title -->
+        <title>Sign Up | Talent Evaluation</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/> 
+        
+       
+        <link rel="stylesheet" href="css/linearicons.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/magnific-popup.css"/>
+        <link rel="stylesheet" href="css/nice-select.css"/>	
+        <link rel="stylesheet" href="css/hexagons.min.css"/>							
+        <link rel="stylesheet" href="css/animate.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+    </h:head>
+    <h:body>
+        <header id="header">
+            <div class="container main-menu">
+                <div class="row align-items-center justify-content-between d-flex">
+                    <div id="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                    </div>
+                    <nav id="nav-menu-container">
+
+
+                        <ul class="nav-menu">
+                            <li class="menu-active"><a href="homepage.xhtml">Home</a></li>
+              
+                            <li class="menu-has-children"><a href="">Account</a>
+                                <ul>
+                                    <li><a href="login.xhtml">Login</a></li>				             
+                                              
+                                </ul>
+                            </li>	
+                        </ul>
+
+
+                    </nav>		    		
+                </div>
+            </div>
+        </header>
+
+      
+        <section class="banner-area relative" id="home">	
+            <div class="overlay overlay-bg"></div>
+            <div class="container">				
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="about-content col-lg-12">
+                        <h1 class="text-white">
+                            Sign Up				
+                        </h1>	
+                        <p class="text-white link-nav"><a href="index.xhtml">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="signup.xhtml"> Sign Up</a></p>
+                    </div>	
+                </div>
+            </div>
+        </section>
+       
+        <section class="price-area section-gap">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="menu-content pb-70 col-lg-8">
+                        <div class="title text-center">
+                            <h1 class="mb-10">Contestant Sign Up Form</h1>
+                            <p>This sign up form is for contestants who are attending competition.</p>
+                        </div>
+                    </div>
+                </div>					
+                <div class="row">
+                    						
+                    <h:form class="form-area,contact-form text-left" enctype="multipart/form-data">
+                        <p:messages/>
+                        <div class="row">	
+                            <div class="col-lg-12 form-group" style="margin-left: 320px;">
+                                <h:panelGrid columns="1">
+                                    <h:outputLabel value="First Name:" for="First Name" style="color: black;" />
+                                    <h:inputText id="FName" value="#{contestantModel.contestant.FName}" class="common-input mb-20 form-control" required="true" requiredMessage="First Name is Required!" style="box-shadow: 0px 0px 0px 0px; width: 500px; border: 1px solid gray; color: black;"/>
+                                    <h:outputLabel value="Last Name:" for="Last Name" style="color: black;" />
+                                    <h:inputText id="LName" value="#{contestantModel.contestant.LName}" class="common-input mb-20 form-control" required="true" requiredMessage="Last Name is Required!" style="box-shadow: 0px 0px 0px 0px; border: 1px solid gray; color: black;" />
+                                    <h:outputLabel value="Gender:" for="gender" style="color: black;" />
+                                    <h:selectOneMenu value="#{contestantModel.contestant.gender}" class="common-input mb-20 form-control" style="border: 1px solid gray; color: black;">
+                                        <f:selectItem itemLabel="Male" itemValue="Male"/>
+                                        <f:selectItem itemLabel="Female" itemValue="Female"/>
+                                    </h:selectOneMenu> 
+                                    <h:outputLabel value="Phone:" for="phone" style="color: black;" />
+                                    <p:inputMask id="phone" value="#{contestantModel.contestant.phone}" mask="+250799999999" class="common-input mb-20 form-control" required="true" requiredMessage="Phone is Required!" style="box-shadow: 0px 0px 0px 0px; border: 1px solid gray; color: black;"/>
+                                    <h:outputLabel value="Username:" for="usernmame" style="color: black;" />
+                                    <h:inputText id="username" value="#{contestantModel.login.username}" class="common-input mb-20 form-control" required="true" requiredMessage="Username is Required!" style="box-shadow: 0px 0px 0px 0px; border: 1px solid gray; color: black;"/>
+                                    <h:outputLabel value="Password:" for="password" style="color: black;" />
+                                    <h:inputText id="password" value="#{contestantModel.login.password}" class="common-input mb-20 form-control" required="true" requiredMessage="Password is Required!" style="box-shadow: 0px 0px 0px 0px; border: 1px solid gray; color: black;"/>
+                                    <h:outputLabel value="Email:" for="email" style="color: black;" />
+                                    <h:inputText id="email" value="#{contestantModel.contestant.email}" class="common-input mb-20 form-control" required="true" requiredMessage="Email is Required!" style="box-shadow: 0px 0px 0px 0px; border: 1px solid gray; color: black;" />
+                                    <h:outputLabel value="Category:" for="category" style="color: black;" />
+                                    <h:selectOneMenu id="Category" value="#{contestantModel.contestant.category}" class="common-input mb-20 form-control" style="border: 1px solid gray; color: black;">
+                                         <f:selectItem itemLabel="music" itemValue="music" />
+                                        <f:selectItem itemLabel="dance" itemValue="dance" />
+                                        <f:selectItem itemLabel="sport" itemValue="sport" />
+                                        <f:selectItem itemLabel="journalism" itemValue="journalism" />
+                                        
+                                    </h:selectOneMenu>
+                                    <h:outputLabel value="MaritalStatus:" for="MaritalStatus" style="color: black;" />
+                                    <h:selectOneMenu id="ssv" value="#{contestantModel.contestant.maritalStatus}" class="common-input mb-20 form-control" style="border: 1px solid gray; color: black;">
+                                         <f:selectItem itemLabel="single" itemValue="single" />
+                                        <f:selectItem itemLabel="married" itemValue="married" />
+                                        <f:selectItem itemLabel="NotMarried" itemValue="Not married" />
+                                        <f:selectItem itemLabel="Divorced" itemValue="Divorced" />
+                                        
+                                    </h:selectOneMenu>
+                                    
+                                    <div class="col-lg-12 d-flex justify-content-between">
+                                        <div class="alert-msg" style="text-align: left;"></div>
+                                        <h:commandButton value="Save" action="#{contestantModel.createContestant()}" class="genric-btn primary circle"></h:commandButton>		
+                                    </div>
+
+                                </h:panelGrid>
+                            </div>
+                        </div>
+                    </h:form>		
+
+
+                </div>
+            </div>	
+        </section>
+       		
+        <footer class="footer-area section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="single-footer-widget">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-md-12">
+                        <div class="single-footer-widget newsletter">
+                            <h6>Newsletter</h6>
+                            <p>Subscribe on our mailing list using this form</p>
+                            <div>
+                                <h:form  class="form-inline">
+
+                                    <div class="form-group row" style="width: 100%">
+                                        <div class="col-lg-8 col-md-12">
+                                            <p:inputText placeholder="Enter Email" value="#{subScriberModel.subScriber.subEmail}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email"/>
+                                           												
+                                        </div> 
+
+                                        <div class="col-lg-4 col-md-12">
+                                            <h:commandButton value="Subscribe" action="#{subScriberModel.createSubScriber()}" class="nw-btn primary-btn"></h:commandButton>
+                                        </div> 
+                                    </div>		
+                                    <div class="info"></div>
+                                </h:form>
+                            </div>		
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+        <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>	
+        <script src="js/hexagons.min.js"></script>							
+        <script src="js/jquery.nice-select.min.js"></script>	
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/waypoints.min.js"></script>							
+        <script src="js/mail-script.js"></script>	
+        <script src="js/main.js"></script>	
+    </h:body>
+</html>
+

@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <h:head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <!-- Favicon-->
+        <link rel="shortcut icon" href="img/fav.png"/>
+        <!-- Author Meta -->
+        <meta name="author" content="codepixer"/>
+        <!-- Meta Description -->
+        <meta name="description" content=""/>
+        <!-- Meta Keyword -->
+        <meta name="keywords" content=""/>
+        <!-- meta character set -->
+        <meta charset="UTF-8"/>
+        <!-- Site Title -->
+        <title>Contestants | Talent Evaluation</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/> 
+        <!--
+        CSS
+        ============================================= -->
+        <link rel="stylesheet" href="css/linearicons.css"/>
+        <link rel="stylesheet" href="css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="css/magnific-popup.css"/>
+        <link rel="stylesheet" href="css/nice-select.css"/>	
+        <link rel="stylesheet" href="css/hexagons.min.css"/>							
+        <link rel="stylesheet" href="css/animate.min.css"/>
+        <link rel="stylesheet" href="css/owl.carousel.css"/>
+        <link rel="stylesheet" href="css/main.css"/>                       
+
+        
+    </h:head>
+    <h:body>
+        <header id="header">
+            <div class="container main-menu">
+                <div class="row align-items-center justify-content-between d-flex">
+                    <div id="logo">
+                        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+                    </div>
+                    <nav id="nav-menu-container">
+                        <ul class="nav-menu">
+                            <li class="menu-active"><a href="index.xhtml">Home</a></li>
+                            <li><a href="signup.xhtml">Contestants</a></li>
+                            
+                                <ul>
+                                    <li><a href="login.xhtml">Login</a></li>	
+                                    <li><a href="signup.xhtml">Create Account</a></li>
+                                </ul>
+                            </li>	
+                        </ul>
+                    </nav>	    		
+                </div>
+            </div>
+        </header>
+
+        
+        <section class="banner-area relative" id="home">	
+            <div class="overlay overlay-bg"></div>
+            <div class="container">				
+                <div class="row d-flex align-items-center justify-content-center">
+                    <div class="about-content col-lg-12">
+                        <h1 class="text-white">
+                            Contestants				
+                        </h1>	
+                        <p class="text-white link-nav"><a href="index.xhtml">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="contestants.xhtml"> Contestants</a></p>
+                    </div>	
+                </div>
+            </div>
+        </section>
+       
+        <section class="products-area product-page section-gap">
+            <div class="container">
+
+                <div class="row">
+              
+                    <c:forEach items="#{contestantModel.contList}" var="items" varStatus="status">
+                        <p:panelGrid columns="2"  class="col-md-3" style=" margin-left: 80px; margin-bottom: 30px;">
+
+
+
+                            <h:outputText value="Names" />
+                            <h:outputText value="#{items.FName} #{items.LName}" />
+
+                            <h:outputText value="Category" />
+                            <h:outputText value="#{items.category}" />
+
+                            
+
+                            <h:outputText value="Id:" />
+                            <h:outputText value="#{items.contId}" />
+
+
+                        </p:panelGrid>
+
+
+
+
+
+                    </c:forEach>
+
+                    <h:form id="modal_form" style="background-color: #FFF">
+
+
+                    </h:form>
+                   	
+
+                </div>
+            </div>	
+        </section>
+
+        <footer class="footer-area section-gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-12">
+                        <div class="single-footer-widget">
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6  col-md-12">
+                        <div class="single-footer-widget newsletter">
+                            <h6>Newsletter</h6>
+                            <p>Subscribe on our mailing list using this form</p>
+                            <div>
+                                <h:form  class="form-inline">
+
+                                    <div class="form-group row" style="width: 100%">
+                                        <div class="col-lg-8 col-md-12">
+                                            <p:inputText  placeholder="Enter Email" value="#{subScriberModel.subScriber.subEmail}" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email '" required="" type="email"/>
+                                            <!--												<div style="position: absolute; left: -5000px;">
+                                                                                                                                                    <p:inputText name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text"/>
+                                                                                                                                            </div>-->
+                                        </div> 
+
+                                        <div class="col-lg-4 col-md-12">
+                                            <h:commandButton value="Subscribe" action="#{subScriberModel.createSubScriber()}" class="nw-btn primary-btn"></h:commandButton>
+                                        </div> 
+                                    </div>		
+                                    <div class="info"></div>
+                                </h:form>
+                            </div>		
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!--<script src="js/vendor/jquery-2.2.4.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>			
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+        <script src="js/easing.min.js"></script>			
+        <script src="js/hoverIntent.js"></script>
+        <script src="js/superfish.min.js"></script>	
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>	
+        <script src="js/owl.carousel.min.js"></script>	
+        <script src="js/hexagons.min.js"></script>							
+        <script src="js/jquery.nice-select.min.js"></script>	
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/waypoints.min.js"></script>							
+        <script src="js/mail-script.js"></script>	
+        <script src="js/main.js"></script>	
+    </h:body>
+</html>
+

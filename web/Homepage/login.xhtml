@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<link rel="shortcut icon" href="img/fav.png"/>
+		<!-- Author Meta -->
+		<meta name="author" content="codepixer"/>
+		<!-- Meta Description -->
+		<meta name="description" content=""/>
+		<!-- Meta Keyword -->
+		<meta name="keywords" content=""/>
+		<!-- meta character set -->
+		<meta charset="UTF-8"/>
+		<!-- Site Title -->
+		<title>Login | Talent Evaluation</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"/> 
+			<!--
+			CSS
+			============================================= -->
+			<link rel="stylesheet" href="css/linearicons.css"/>
+			<link rel="stylesheet" href="css/font-awesome.min.css"/>
+			<link rel="stylesheet" href="css/bootstrap.css"/>
+			<link rel="stylesheet" href="css/magnific-popup.css"/>
+			<link rel="stylesheet" href="css/nice-select.css"/>	
+			<link rel="stylesheet" href="css/hexagons.min.css"/>							
+			<link rel="stylesheet" href="css/animate.min.css"/>
+			<link rel="stylesheet" href="css/owl.carousel.css"/>
+			<link rel="stylesheet" href="css/main.css"/>
+    </h:head>
+    <h:body>
+       <header id="header">
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="index.html"><img src="img/logo.png" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+                                        
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="index.xhtml">Home</a></li>
+				          <li><a href="signup.xhtml">Contestants</a></li>
+				          
+				          <li class="menu-has-children"><a href="">Account</a>
+				            <ul>
+                                                <li class="menu-has-children">Login as</li>
+                                               <li><a href="login.xhtml">Admin</a></li>	
+                                               <li><a href="login.xhtml">Judge</a></li>	
+                                            </ul>
+					          </li>	
+				            </ul>
+				         
+				      </nav>		    		
+			    	</div>
+			    </div>
+			  </header>
+
+			
+			<section class="banner-area relative" id="home">	
+				<div class="overlay overlay-bg"></div>
+				<div class="container">				
+					<div class="row d-flex align-items-center justify-content-center">
+						<div class="about-content col-lg-12">
+							<h1 class="text-white">
+								Login				
+							</h1>	
+							<p class="text-white link-nav"><a href="index.xhtml">Home </a>  <span class="lnr lnr-arrow-right"></span>  <a href="login.xhtml"> Login</a></p>
+						</div>	
+					</div>
+				</div>
+			</section>
+			
+			<section class="products-area product-page section-gap">
+				<div class="container">
+											
+					<div class="row">
+						<div class="col-lg-12 col-md-6">
+							<div class="single-product">
+								<h:form class="form-area,contact-form text-right">
+								<div class="row">	
+									<div class="col-lg-6 form-group" style="margin-left: 250px;">
+										<label style="margin-right: 500px; margin-top: 10px; margin-bottom: 10px; font-size: medium; color: black; " >Username</label>
+										<h:inputText value="#{loginBean.uname}" pt:placeholder="Enter Username" class="common-input mb-20 form-control" required="true" style="box-shadow: 0px 0px 0px 0px; border: 1px solid black;"/>
+									<label style="margin-right: 500px; margin-top: 10px; margin-bottom: 10px; font-size: medium; color: black; " >Password</label>
+                                                                        <h:inputSecret  value="#{loginBean.psd}" pt:placeholder="Enter Password" class="common-input mb-20 form-control" required="true" style="box-shadow: 0px 0px 0px 0px; border: 1px solid black;"/>
+									
+									<div class="col-lg-12 d-flex justify-content-between">
+										<div class="alert-msg" style="text-align: left;"></div>
+										<h:commandButton value="Login" action="#{loginBean.searchingCredentials()}" class="genric-btn primary circle" style="float: right;"></h:commandButton>		
+									</div>
+									</div>
+									
+									
+								</div>
+							</h:form>	
+							</div>
+						</div>	
+						
+					
+																		
+					</div>
+				</div>	
+			</section>
+							
+				
+
+			<script src="js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+  			<script src="js/easing.min.js"></script>			
+			<script src="js/hoverIntent.js"></script>
+			<script src="js/superfish.min.js"></script>	
+			<script src="js/jquery.ajaxchimp.min.js"></script>
+			<script src="js/jquery.magnific-popup.min.js"></script>	
+			<script src="js/owl.carousel.min.js"></script>	
+			<script src="js/hexagons.min.js"></script>							
+			<script src="js/jquery.nice-select.min.js"></script>	
+			<script src="js/jquery.counterup.min.js"></script>
+			<script src="js/waypoints.min.js"></script>							
+			<script src="js/mail-script.js"></script>	
+			<script src="js/main.js"></script>
+    </h:body>
+</html>
+
